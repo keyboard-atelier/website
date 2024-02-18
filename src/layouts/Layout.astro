@@ -15,6 +15,8 @@ const {
 	title,
 	desc
 } = Astro.props;
+
+const ogTitle = title === "Keyboard Atelier" ? title : title + " - Keyboard Atelier"
 ---
 
 <!doctype html>
@@ -32,10 +34,16 @@ const {
 		<meta name="msapplication-TileColor" content="#757575">
 		<meta name="theme-color" content="#ffffff">
 
-		<meta property="og:title" content={title === "Keyboard Atelier" ? title : title + " - Keyboard Atelier"} />
+		<meta property="og:title" content={ogTitle} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://kbatelier.org" />
 		<meta property="og:image" content="https://kbatelier.org/atelier-ograph.png" />
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="https://kbatelier.org">
+		<meta name="twitter:title" content={ogTitle}>
+		<meta name="twitter:description" content={desc}>
+		<meta name="twitter:image" content="https://kbatelier.org/atelier-ograph.png" >
 
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
