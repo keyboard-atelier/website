@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import { Picture } from 'astro:assets';
+import svgReference from "../assets/atelier-cropped.svg";
+import imgReference from "../assets/resources-screenshot.jpg"
+---
+
+<Layout title="Keyboard Atelier" desc="A community for keyboard design by keyboard designers.">
+  <main>
+    <div class="container mx-auto max-w-[1400px] px-4 sm:px-12 md:px-12 lg:px-24">
+      <!-- Splash block -->
+      <div class="w-100 flex flex-col justify-center text-center mt-20 mb-20 md:mt-24 md:mb-24 lg:mt-28 lg:mb-28">
+        <div class="w-100 flex flex-row justify-center pb-10">
+          <img src={svgReference.src} class="w-[300px] max-w-[50%] ms-6" />
+        </div>
+        <h1 class="font-logo text-4xl md:text-5xl font-medium">Keyboard Atelier</h1>
+				<p class="mt-4 md:text-lg">A community dedicated to keyboard design.</p>
+
+				<!-- Buttons -->
+				<div class="flex flex-row justify-center mt-8 gap-3">
+					<a href="https://discord.gg/b7vwhHS" class="text-white bg-zinc-600 hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 font-medium rounded-lg text-md px-5 py-2.5">Discord</a>
+					<a href="#" class="pointer-events-none text-white bg-zinc-600 hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 font-medium rounded-lg text-md px-5 py-2.5">Wiki Coming Soon</a>
+				</div>
+
+      </div>
+			<!-- End splash -->
+
+
+			<!-- Discord section -->
+			<div class="flex flex-col md:flex-row mb-20">
+				<!-- Discord widget wrapper  -->
+				<div class="h-[350px] w-100 md:w-1/3 auto flex flex-row justify-center">
+					<iframe class="" src="https://discord.com/widget?id=728571839529353216&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				</div>
+
+				<!-- Discord block text -->
+				<div class="w-100 md:w-2/3 md:ps-12 flex flex-col justify-center text-center md:text-start pt-6 md:pt-0">
+					<div>
+						<h2 class="text-3xl font-medium pb-5">The Keyboard Designers' Headquarters</h2>
+						<p class="pb-2">Since its founding in 2020, Atelier has been a community for keyboard designers by keyboard designers.</p>
+						<p class="pb-6">Whether you're an expert or just getting started, enjoy real-time discussion and feedback regarding keyboard design in a safe dedicated Discord group.</p>
+						<a href="https://discord.gg/b7vwhHS" class="text-white bg-zinc-600 hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Join Now</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Resources section -->
+			<div class="flex flex-col md:flex-row-reverse mb-20">
+				<!-- Resources screenshot -->
+				<div class="h-[350px] w-100 md:w-1/3 auto flex flex-row justify-center overflow-hidden outline outline-2 outline-gray-200 rounded-[5px]">
+					<Picture src={imgReference} alt=""/>
+				</div>
+
+				<!-- Resources block text -->
+				<div class="w-100 md:w-2/3 flex flex-col justify-center md:pe-12 text-center md:text-end pt-6 md:pt-0">
+					<div class="md:text-end">
+						<h2 class="text-3xl font-medium pb-5">Knowledge For All</h2>
+						<p class="pb-2">Discord members gain access to lists of information and resources to aid in the design process.</p>
+						<p class="pb-6">A community wiki is currently in the works.</p>
+						<a href="#" class="pointer-events-none text-white bg-zinc-600 hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Wiki Coming Soon</a>
+					</div>
+				</div>
+			</div>
+			
+
+
+
+    </div>
+  </main>
+</Layout>

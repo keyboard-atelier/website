@@ -1,0 +1,58 @@
+---
+// Props if any
+import svgReference from "../assets/atelier-white.svg";
+import { Icon } from 'astro-icon/components'
+---
+
+<!-- Alpine Wrapper -->
+<div x-data="{ mobileNavOpen: false }">
+
+  <!-- Static nav base -->
+  <div class="w-100 h-20 bg-zinc-600 flex flex-row align-center" id="nav-parent">
+
+    <!-- Container -->
+    <div class="container mx-auto w-100 h-100 flex flex-row align-center px-4">
+
+      <!-- Nav icon -->
+      <a class="w-100 flex flex-row justify-center" href="/">
+        <img src={svgReference.src} width="64px"/>
+      </a>
+
+      <!-- Nav text -->
+      <a class="flex-col h-100 justify-center items-center ps-2 hidden sm:flex" href="/">
+        <h2 class="text-white text-xl font-logo">Keyboard Atelier</h2>
+      </a>
+
+      <!-- Links -->
+      <div class="grow shrink flex-row justify-end gap-8 h-100 items-center place-center hidden sm:flex">
+        <div class="flex flex-col h-100 justify-center">
+          <a class="text-zinc-400 transition duration-100 ease-in-out hover:text-white" href="https://discord.gg/b7vwhHS">Discord</a>
+        </div>
+        <div class="flex flex-col h-100 justify-center">
+          <a class="text-zinc-400 pointer-events-none" href="#">Wiki (Coming Soon)</a>
+        </div>
+      </div>
+
+      <!-- Mobile toggle button -->
+      <div class="grow flex-row h-100 justify-end flex sm:hidden items-center">
+        <button x-on:click="mobileNavOpen = !mobileNavOpen; console.log(mobileNavOpen);" class="rounded-sm text-white focus:outline-none focus:ring-2 focus:ring-zinc-400 p-1">
+          <Icon name="ph:list" class="text-3xl"/>
+        </button>
+      </div>
+
+    <!-- End container -->
+    </div>
+
+  <!-- End static nav -->
+  </div>
+
+  <!-- Mobile collapse section -->
+  <div x-show="mobileNavOpen" x-collapse class="absolute bg-zinc-600 w-full flex-row justify-center">
+      <div class="px-8 py-8 text-white text-md flex flex-col items-start gap-6">
+        <a href="https://discord.gg/b7vwhHS">Discord</a>
+        <a href="" class="pointer-events-none text-zinc-400">Wiki (Coming Soon)</a>
+      </div>
+  </div>
+
+
+</div>

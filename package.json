@@ -1,0 +1,33 @@
+{
+  "name": "atelier-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.13.5",
+    "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/check": "^0.5.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter": "^5.0.16",
+    "@fontsource-variable/inter-tight": "^5.0.19",
+    "@fontsource/m-plus-rounded-1c": "^5.0.11",
+    "@iconify-json/ph": "^1.1.11",
+    "@types/alpinejs": "^3.13.6",
+    "alpinejs": "^3.13.5",
+    "astro": "^4.4.0",
+    "astro-icon": "^1.1.0",
+    "sharp": "^0.33.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/alpinejs__collapse": "^3.13.3",
+    "@types/node": "^20.11.19"
+  }
+}
