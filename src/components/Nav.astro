@@ -35,7 +35,7 @@ import { Icon } from 'astro-icon/components'
 
       <!-- Mobile toggle button -->
       <div class="grow flex-row h-100 justify-end flex sm:hidden items-center">
-        <button x-on:click="mobileNavOpen = !mobileNavOpen; console.log(mobileNavOpen);" class="rounded-sm text-white focus:outline-none focus:ring-2 focus:ring-zinc-400 p-1">
+        <button x-on:click="mobileNavOpen = !mobileNavOpen" class="rounded-sm text-white focus:outline-none focus:ring-2 focus:ring-zinc-400 p-1">
           <Icon name="ph:list" class="text-3xl"/>
         </button>
       </div>
